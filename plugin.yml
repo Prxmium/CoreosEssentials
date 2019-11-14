@@ -1,0 +1,14 @@
+    name: TestPlugin
+    version: 1.0
+    api-version: 1.14
+    main: com.gmail.corysaucer.Main
+    commands:
+      heal:
+        description: Does something
+        usage: /heal
+      book:
+        description: book
+        usage: retard
+      opkit:
+        description: gives op kit
+        usage: opkit
