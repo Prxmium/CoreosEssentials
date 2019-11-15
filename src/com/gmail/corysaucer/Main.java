@@ -2,6 +2,7 @@ package com.gmail.corysaucer;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.corysaucer.Commands.FlyCommand;
 import com.gmail.corysaucer.Commands.HealCommand;
 import com.gmail.corysaucer.Commands.OPKitCommand;
 import com.gmail.corysaucer.Commands.ReloadCommand;
@@ -34,6 +35,7 @@ public final class Main extends JavaPlugin {
 		getCommand("cereload").setExecutor(new ReloadCommand());
 		getCommand("heal").setExecutor(new HealCommand());
 		getCommand("opkit").setExecutor(new OPKitCommand());
+		getCommand("fly").setExecutor(new FlyCommand());
 		
 	
 	}
