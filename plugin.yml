@@ -1,14 +1,17 @@
-    name: TestPlugin
+    name: CoreosEssentials
     version: 1.0
     api-version: 1.14
     main: com.gmail.corysaucer.Main
     commands:
+      cereload:
+        description: Reloads config
+        usage: reload
+        permission: coreo.reload
       heal:
         description: Does something
         usage: /heal
-      book:
-        description: book
-        usage: retard
+        permission: coreo.heal
       opkit:
         description: gives op kit
         usage: opkit
+        permission: coreo.opkit
