@@ -16,9 +16,9 @@ public class FlyCommand implements CommandExecutor {
 			if(player.isFlying()) {
 				player.setAllowFlight(false);
 				player.setFlying(false);
+				player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);
 			}else{
 				player.setAllowFlight(true);
-				player.setFlying(true);
 				player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);
 			}
 		}
