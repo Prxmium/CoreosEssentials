@@ -16,6 +16,7 @@ public class HealCommand implements CommandExecutor {
 			player.hasPermission("coreo.heal");
 			command.getName().equalsIgnoreCase("heal");
 			player.setHealth(20);
+			player.setFoodLevel(20);
 			player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);
 			return true;
 	}else{
