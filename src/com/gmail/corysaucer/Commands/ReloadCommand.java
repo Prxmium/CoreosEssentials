@@ -17,5 +17,5 @@ public class ReloadCommand implements CommandExecutor {
 		player.sendMessage(ChatColor.GRAY + "[" + ChatColor.RED + "CE" + ChatColor.GRAY + "]" + ChatColor.WHITE + " Config reloaded.");
 		return true;
 	}
-	
+
 }

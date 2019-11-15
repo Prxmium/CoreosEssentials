@@ -35,7 +35,7 @@ public final class Main extends JavaPlugin {
 		getCommand("heal").setExecutor(new HealCommand());
 		getCommand("opkit").setExecutor(new OPKitCommand());
 		
-		
+	
 	}
 
 	@Override

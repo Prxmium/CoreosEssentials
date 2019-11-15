@@ -19,6 +19,7 @@ public class OPKitCommand implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		
 			//Gives an OP set of items
 			ItemStack helm = new ItemStack(Material.DIAMOND_HELMET, 1);
 			ItemStack chest = new ItemStack(Material.DIAMOND_CHESTPLATE, 1);

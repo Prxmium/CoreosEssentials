@@ -12,6 +12,6 @@
         usage: /heal
         permission: coreo.heal
       opkit:
-        description: gives op kit
+        description: Gives OP kit
         usage: opkit
         permission: coreo.opkit

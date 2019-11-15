@@ -45,5 +45,5 @@ public class Config {
 	public static void reload() {
 		customFile = YamlConfiguration.loadConfiguration(file);
 	}
-	
+
 }

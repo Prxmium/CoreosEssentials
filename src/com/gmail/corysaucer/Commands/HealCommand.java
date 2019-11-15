@@ -23,7 +23,7 @@ public class HealCommand implements CommandExecutor {
 		return true;
 	
 	}
-		
+	
 	}
 
 }
