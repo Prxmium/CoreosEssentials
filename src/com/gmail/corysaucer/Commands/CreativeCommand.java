@@ -14,6 +14,7 @@ public class CreativeCommand implements CommandExecutor {
 		Player player = (Player) sender;
 		if(sender instanceof Player) {
 			player.hasPermission("coreo.creative");
+			command.getName().equalsIgnoreCase("gmc");
 			player.setGameMode(GameMode.CREATIVE);
 		}else{
 			sender.sendMessage(ChatColor.RED + "You don't meet the conditions required to run this command.");
