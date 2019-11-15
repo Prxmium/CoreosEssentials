@@ -5,7 +5,7 @@
     commands:
       cereload:
         description: Reloads config
-        usage: reload
+        usage: /cereload
         permission: coreo.reload
       heal:
         description: Does something
@@ -13,9 +13,13 @@
         permission: coreo.heal
       opkit:
         description: Gives OP kit
-        usage: opkit
+        usage: /opkit
         permission: coreo.opkit
+      fly:
+        description: Makes you fly or stop flying
+        usage: /fly
+        permission: coreo.fly
       gmc:
         description: Sets gamemode to creative
-        usage: gmc
+        usage: /gmc
         permission: coreo.gmc
