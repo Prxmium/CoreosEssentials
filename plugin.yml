@@ -8,7 +8,7 @@
         usage: /cereload
         permission: coreo.reload
       heal:
-        description: Does something
+        description: Heals sender
         usage: /heal
         permission: coreo.heal
       opkit:
@@ -23,3 +23,7 @@
         description: Sets gamemode to creative
         usage: /gmc
         permission: coreo.gmc
+      feed:
+        description: Feeds sender
+        usage: /feed
+        permission: coreo.feed
