@@ -13,6 +13,7 @@ public class FeedCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		Player player = (Player) sender;
 		if(sender instanceof Player) {
+			command.getName().equalsIgnoreCase("feed");
 			player.hasPermission("coreo.feed");
 			player.setFoodLevel(20);
 			player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);
