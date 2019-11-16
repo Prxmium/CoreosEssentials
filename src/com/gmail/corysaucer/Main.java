@@ -7,14 +7,18 @@ import com.gmail.corysaucer.Commands.FlyCommand;
 import com.gmail.corysaucer.Commands.HealCommand;
 import com.gmail.corysaucer.Commands.OPKitCommand;
 import com.gmail.corysaucer.Commands.ReloadCommand;
+import com.gmail.corysaucer.Events.OnBucketEmpty;
+import com.gmail.corysaucer.Events.OnTNTPlace;
 
 public final class Main extends JavaPlugin {
-	Events eventHandler = new Events();
+	EventHandler eventHandler = new EventHandler();
 	@Override
 	public void onEnable() {
 		//Startup logic
 		System.out.println("CoreosEssentials has started!");
-		this.getServer().getPluginManager().registerEvents(eventHandler, this);
+		this.getServer().getPluginManager().registerEvents(new EventHandler(), this);
+		this.getServer().getPluginManager().registerEvents(new OnTNTPlace(), this);
+		this.getServer().getPluginManager().registerEvents(new OnBucketEmpty(), this);
 		
 		getConfig().options().copyDefaults();
 		saveDefaultConfig();
