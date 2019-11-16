@@ -3,6 +3,7 @@ package com.gmail.corysaucer;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.corysaucer.Commands.CreativeCommand;
+import com.gmail.corysaucer.Commands.FeedCommand;
 import com.gmail.corysaucer.Commands.FlyCommand;
 import com.gmail.corysaucer.Commands.HealCommand;
 import com.gmail.corysaucer.Commands.OPKitCommand;
@@ -42,6 +43,7 @@ public final class Main extends JavaPlugin {
 		getCommand("opkit").setExecutor(new OPKitCommand());
 		getCommand("fly").setExecutor(new FlyCommand());
 		getCommand("gmc").setExecutor(new CreativeCommand());
+		getCommand("feed").setExecutor(new FeedCommand());
 		
 	
 	}
