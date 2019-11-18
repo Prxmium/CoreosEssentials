@@ -9,6 +9,7 @@ import com.gmail.corysaucer.Commands.HealCommand;
 import com.gmail.corysaucer.Commands.OPKitCommand;
 import com.gmail.corysaucer.Commands.ReloadCommand;
 import com.gmail.corysaucer.Events.OnBucketEmpty;
+import com.gmail.corysaucer.Events.OnPlayerJoin;
 import com.gmail.corysaucer.Events.OnTNTPlace;
 
 public final class Main extends JavaPlugin {
@@ -20,6 +21,7 @@ public final class Main extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new EventHandler(), this);
 		this.getServer().getPluginManager().registerEvents(new OnTNTPlace(), this);
 		this.getServer().getPluginManager().registerEvents(new OnBucketEmpty(), this);
+		this.getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
 		
 		getConfig().options().copyDefaults();
 		saveDefaultConfig();
