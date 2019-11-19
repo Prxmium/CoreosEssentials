@@ -12,10 +12,12 @@ public class OnPlayerJoin implements Listener {
 	@EventHandler
 	public void onPlayerJoin (PlayerJoinEvent event) {
 		Player player = event.getPlayer();
-		if(!player.isOnGround()) {
-			player.hasPermission("coreo.fly");
+		if(player.hasPermission("coreo.fly")) {
+			if(!player.isOnGround()) {
 			player.setAllowFlight(true);
-			player.setFlying(true);
+			player.setFlying(true);	
+			}
+			
 		}
 		
 		
