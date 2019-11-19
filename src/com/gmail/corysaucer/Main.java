@@ -14,6 +14,8 @@ import com.gmail.corysaucer.Commands.TPCommand;
 import com.gmail.corysaucer.Events.OnBucketEmpty;
 import com.gmail.corysaucer.Events.OnPlayerJoin;
 import com.gmail.corysaucer.Events.OnTNTPlace;
+import com.gmail.corysaucer.Listeners.BlockBreakListener;
+import com.gmail.corysaucer.Listeners.CustomListeners;
 
 public final class Main extends JavaPlugin {
 	EventHandler eventHandler = new EventHandler();
@@ -25,6 +27,8 @@ public final class Main extends JavaPlugin {
 		this.getServer().getPluginManager().registerEvents(new OnTNTPlace(), this);
 		this.getServer().getPluginManager().registerEvents(new OnBucketEmpty(), this);
 		this.getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
+		this.getServer().getPluginManager().registerEvents(new CustomListeners(), this);
+		this.getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
 		
 		getConfig().options().copyDefaults();
 		saveDefaultConfig();
