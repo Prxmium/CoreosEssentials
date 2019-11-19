@@ -27,3 +27,11 @@
         description: Feeds sender
         usage: /feed
         permission: coreo.feed
+      tp:
+        description: Teleports you to a player or teleports a player to another player
+        usage: /tp <player> or /tp <player1> <player2>
+        permission: coreo.tp
+      tpall:
+        description: Teleports all online players to your location
+        usage: /tpall
+        permission: coreo.tpall

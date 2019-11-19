@@ -9,6 +9,8 @@ import com.gmail.corysaucer.Commands.HealCommand;
 import com.gmail.corysaucer.Commands.OPKitCommand;
 import com.gmail.corysaucer.Commands.ReloadCommand;
 import com.gmail.corysaucer.Commands.SurvivalCommand;
+import com.gmail.corysaucer.Commands.TPAllCommand;
+import com.gmail.corysaucer.Commands.TPCommand;
 import com.gmail.corysaucer.Events.OnBucketEmpty;
 import com.gmail.corysaucer.Events.OnPlayerJoin;
 import com.gmail.corysaucer.Events.OnTNTPlace;
@@ -48,6 +50,8 @@ public final class Main extends JavaPlugin {
 		getCommand("gmc").setExecutor(new CreativeCommand());
 		getCommand("feed").setExecutor(new FeedCommand());
 		getCommand("gms").setExecutor(new SurvivalCommand());
+		getCommand("tp").setExecutor(new TPCommand());
+		getCommand("tpall").setExecutor(new TPAllCommand());
 		
 	
 	}
