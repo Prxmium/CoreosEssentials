@@ -3,12 +3,14 @@ package com.gmail.corysaucer;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.corysaucer.Commands.AdventureCommand;
 import com.gmail.corysaucer.Commands.CreativeCommand;
 import com.gmail.corysaucer.Commands.FeedCommand;
 import com.gmail.corysaucer.Commands.FlyCommand;
 import com.gmail.corysaucer.Commands.HealCommand;
 import com.gmail.corysaucer.Commands.OPKitCommand;
 import com.gmail.corysaucer.Commands.ReloadCommand;
+import com.gmail.corysaucer.Commands.SpectatorCommand;
 import com.gmail.corysaucer.Commands.SurvivalCommand;
 import com.gmail.corysaucer.Commands.TPAllCommand;
 import com.gmail.corysaucer.Commands.TPCommand;
@@ -58,8 +60,8 @@ public final class Main extends JavaPlugin {
 		getCommand("fly").setExecutor(new FlyCommand());
 		getCommand("gmc").setExecutor(new CreativeCommand());
 		getCommand("gms").setExecutor(new SurvivalCommand());
-		getCommand("gma").setExecutor(new SurvivalCommand());
-		getCommand("gmsp").setExecutor(new SurvivalCommand());
+		getCommand("gma").setExecutor(new AdventureCommand());
+		getCommand("gmsp").setExecutor(new SpectatorCommand());
 		getCommand("feed").setExecutor(new FeedCommand());
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("tpall").setExecutor(new TPAllCommand());

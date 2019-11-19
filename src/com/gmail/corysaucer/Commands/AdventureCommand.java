@@ -15,20 +15,18 @@ public class AdventureCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(sender instanceof Player) {
 		Player player = (Player) sender;
-			if (player.hasPermission("coreo.adventure")) {
-				if(args.length == 0) {
-					command.getName().equalsIgnoreCase("gma");
-					player.setGameMode(GameMode.ADVENTURE);
-					player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);
-			
-					}else if(args.length == 1) {
-						Player target = Bukkit.getPlayer(args[0]);
-						if (target != null) {
-							target.setGameMode(GameMode.ADVENTURE);
-							player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);
-					
-						}else{
-							sender.sendMessage(ChatColor.RED + "Player not found.");
+		if(args.length == 0) {
+			player.hasPermission("coreo.adventure");
+			command.getName().equalsIgnoreCase("gma");
+			player.setGameMode(GameMode.ADVENTURE);
+			player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);		
+				}else if(args.length == 1) {
+					Player target = Bukkit.getPlayer(args[0]);
+					if (target != null) {
+						target.setGameMode(GameMode.ADVENTURE);
+						player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1, 1);			
+							}else{
+								sender.sendMessage(ChatColor.RED + "Player not found.");
 				}
 				
 			
@@ -36,12 +34,9 @@ public class AdventureCommand implements CommandExecutor {
 			
 			}
 			
-			
-			
-		}
-			
 		return true;
 	
 	}
 
-}
+
+	}
