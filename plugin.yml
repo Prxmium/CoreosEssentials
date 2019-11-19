@@ -27,6 +27,14 @@
         description: Sets gamemode to survival
         usage: /gmc
         permission: coreo.gms
+      gmsp:
+        description: Sets gamemode to specator
+        usage: /gmsp
+        permission: coreo.gmsp
+      gma:
+        description: Sets gamemode to adventure
+        usage: /gma
+        permission: coreo.gma
       feed:
         description: Feeds sender
         usage: /feed

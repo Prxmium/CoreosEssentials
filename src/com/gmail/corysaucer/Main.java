@@ -57,8 +57,10 @@ public final class Main extends JavaPlugin {
 		getCommand("opkit").setExecutor(new OPKitCommand());
 		getCommand("fly").setExecutor(new FlyCommand());
 		getCommand("gmc").setExecutor(new CreativeCommand());
-		getCommand("feed").setExecutor(new FeedCommand());
 		getCommand("gms").setExecutor(new SurvivalCommand());
+		getCommand("gma").setExecutor(new SurvivalCommand());
+		getCommand("gmsp").setExecutor(new SurvivalCommand());
+		getCommand("feed").setExecutor(new FeedCommand());
 		getCommand("tp").setExecutor(new TPCommand());
 		getCommand("tpall").setExecutor(new TPAllCommand());
 		
