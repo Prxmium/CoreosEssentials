@@ -17,14 +17,16 @@ public class BlockBreakListener implements Listener {
 	public void OnBlockBreak (BlockBreakEvent event) {
 		Block blockBroken = event.getBlock();
 		if (blockBroken.getType().equals(Material.SPAWNER)) {
+			if(event.getPlayer().hasPermission("coreo.silk")) {
 			event.getPlayer().getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH);
-			event.getPlayer().hasPermission("coreo.silk");
-			Bukkit.getServer().getPluginManager().callEvent(new SpawnerBreakEvent(event.getPlayer(), blockBroken));
-		}else if(blockBroken.getType().equals(Material.SPAWNER) && event.getPlayer().getInventory().getItemInMainHand().containsEnchantment(Enchantment.SILK_TOUCH) && !event.getPlayer().hasPermission("coreo.silk")) {
+			Bukkit.getServer().getPluginManager().callEvent(new SpawnerBreakEvent(event.getPlayer(), blockBroken));	
+			}else{
 			event.getPlayer().sendMessage(ChatColor.RED + "You don't meet the requirements to silk touch spawners.");
-			
+			}
+		
 		}
 		
-	}
 			
+	}
+
 }
