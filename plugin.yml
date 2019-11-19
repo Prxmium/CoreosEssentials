@@ -23,6 +23,10 @@
         description: Sets gamemode to creative
         usage: /gmc
         permission: coreo.gmc
+      gms:
+        description: Sets gamemode to survival
+        usage: /gmc
+        permission: coreo.gms
       feed:
         description: Feeds sender
         usage: /feed
