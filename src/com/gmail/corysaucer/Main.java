@@ -1,5 +1,6 @@
 package com.gmail.corysaucer;
 
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.corysaucer.Commands.CreativeCommand;
@@ -22,16 +23,19 @@ public final class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		//Startup logic
-		System.out.println("CoreosEssentials has started!");
-		this.getServer().getPluginManager().registerEvents(new EventHandler(), this);
-		this.getServer().getPluginManager().registerEvents(new OnTNTPlace(), this);
-		this.getServer().getPluginManager().registerEvents(new OnBucketEmpty(), this);
-		this.getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
-		this.getServer().getPluginManager().registerEvents(new CustomListeners(), this);
-		this.getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+		PluginManager pm = getServer().getPluginManager();
+		System.out.println("[CE] Coreo's Essentials has started!");
+		pm.registerEvents(new EventHandler(), this);
+		pm.registerEvents(new OnTNTPlace(), this);
+		pm.registerEvents(new OnBucketEmpty(), this);
+		pm.registerEvents(new OnPlayerJoin(), this);
+		pm.registerEvents(new OnPlayerJoin(), this);
+		pm.registerEvents(new CustomListeners(), this);
+		pm.registerEvents(new BlockBreakListener(), this);
 		
-		getConfig().options().copyDefaults();
-		saveDefaultConfig();
+		
+		
+		this.saveResource("config.yml", false);
 		
 		Config.setup();
 		Config.get().addDefault("OPKitHelmetName", "Cool Helmet Name");
@@ -43,9 +47,10 @@ public final class Main extends JavaPlugin {
 		Config.get().addDefault("OPKitAxeName", "Cool Axe Name");
 		Config.get().addDefault("OPKitShovelName", "Cool Shovel Name");
 		Config.get().addDefault("OPKitSwordName", "Cool Sword Name");
+		Config.get().addDefault("Player-Join-Message", "&c$player &bjoined the Server");
+		Config.get().addDefault("Player-Leave-Message", "&c$player &bleft the Server");
 		Config.get().options().copyDefaults(true);
-		Config.save();
-		
+		this.saveResource("config.yml", false);
 		
 		getCommand("cereload").setExecutor(new ReloadCommand());
 		getCommand("heal").setExecutor(new HealCommand());
@@ -62,6 +67,6 @@ public final class Main extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
-		System.out.println("CoreosEssentials has been disabled!");
+		System.out.println("[CE] Coreo's Essentials has been disabled!");
 	}
 }
