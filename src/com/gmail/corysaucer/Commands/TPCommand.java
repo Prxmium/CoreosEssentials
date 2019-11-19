@@ -14,6 +14,7 @@ public class TPCommand implements CommandExecutor {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
 			player.hasPermission("coreo.tp");
+			command.getName().equalsIgnoreCase("tp");
 			if(args.length == 0) {
 				player.sendMessage(ChatColor.RED + "Please specify a player to teleport to.");
 				player.sendMessage(ChatColor.YELLOW + "To teleport to another player: /tp <playername>");
