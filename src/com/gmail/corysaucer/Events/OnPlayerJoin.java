@@ -5,6 +5,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
+import com.gmail.corysaucer.Config;
+
 public class OnPlayerJoin implements Listener {
 	
 	@EventHandler
@@ -19,6 +21,14 @@ public class OnPlayerJoin implements Listener {
 		
 		
 
+	}
+	
+	@EventHandler
+	public void playerJoinMessage (PlayerJoinEvent event) {
+		Player player = event.getPlayer();
+		event.setJoinMessage(Config.get().getString("Player-Join-Message").replace("$player", player.getName()).replaceAll("&", "§"));
+
+		
 	}
 
 }
